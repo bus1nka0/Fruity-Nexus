@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Fruity Nexus</string>
+    <string name="play_button">Играть</string>
+    <string name="settings_button">Настройки</string>
+    <string name="exit_button">Выход</string>
+    <string name="back_button">Назад</string>
+    <string name="high_score_text">Рекорд: %d</string>
+    <string name="moves_text">Ходов: %d</string>
+    <string name="score_text">Очки: %d</string>
+    <string name="vibration_setting">Вибрация</string>
+    <string name="language_setting">Язык</string>
+    <string name="language_english">Английский</string>
+    <string name="language_russian">Русский</string>
+</resources>

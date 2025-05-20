@@ -1,28 +1,132 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center">
+    android:background="#1C1C1E">
 
-    <Button
-        android:id="@+id/play_button"
+    <TextView
+        android:id="@+id/gameTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Play"
-        android:layout_marginBottom="20dp"/>
+        android:text="Fruity Nexus"
+        android:textColor="#FFFFFF"
+        android:textSize="48sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="80dp" />
 
-    <Button
-        android:id="@+id/settings_button"
+    <RelativeLayout
+        android:id="@+id/spinningFruitContainer"
+        android:layout_width="320dp"  android:layout_height="320dp"
+        app:layout_constraintBottom_toTopOf="@+id/highScoreTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gameTitle"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp">
+
+        <ImageView
+            android:id="@+id/fruit1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/sliva"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="16dp" android:layout_marginTop="16dp"  tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/fruit2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/arbuzik"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="16dp" android:layout_marginTop="16dp"  tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/fruit3"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/vinogradik"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="16dp" android:layout_marginBottom="16dp" tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/fruit4"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/bananchiki"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="16dp" android:layout_marginBottom="16dp" tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/fruit5"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/yablochko"
+            android:layout_centerInParent="true"
+            tools:ignore="ContentDescription" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/highScoreTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Settings"
-        android:layout_marginBottom="20dp"/>
+        android:text="Рекорд: 0"
+        android:textColor="#FFD700"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomButtonsContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <Button
-        android:id="@+id/exit_button"
+    <LinearLayout
+        android:id="@+id/bottomButtonsContainer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Exit"/>
+        android:orientation="horizontal"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
-</LinearLayout>
+        <ImageButton
+            android:id="@+id/exit_button"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginEnd="24dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:scaleType="fitCenter"
+            android:src="@drawable/close"
+            android:contentDescription="Exit Game" />
+
+        <ImageButton
+            android:id="@+id/play_button"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginEnd="24dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:scaleType="fitCenter"
+            android:src="@drawable/play_arrow"
+            android:contentDescription="Play Game" />
+
+        <ImageButton
+            android:id="@+id/settings_button"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:scaleType="fitCenter"
+            android:src="@drawable/settings"
+            android:contentDescription="Settings" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
