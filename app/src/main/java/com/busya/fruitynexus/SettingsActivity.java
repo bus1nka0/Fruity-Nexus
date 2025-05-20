@@ -8,10 +8,6 @@ public class SettingsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings); // Убедитесь, что у вас есть activity_settings.xml
-
-        // Здесь можно добавить логику для настроек, например:
-        // Switch soundToggle = findViewById(R.id.sound_toggle);
-        // soundToggle.setOnCheckedChangeListener(...);
+        setContentView(R.layout.activity_settings);
     }
 }

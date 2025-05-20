@@ -11,11 +11,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main); // Убедитесь, что у вас есть activity_main.xml
+        setContentView(R.layout.activity_main);
 
-        Button playButton = findViewById(R.id.play_button); // Добавьте кнопку с id "play_button" в activity_main.xml
-        Button settingsButton = findViewById(R.id.settings_button); // Добавьте кнопку с id "settings_button" в activity_main.xml
-        Button exitButton = findViewById(R.id.exit_button); // Добавьте кнопку с id "exit_button" в activity_main.xml
+        Button playButton = findViewById(R.id.play_button);
+        Button settingsButton = findViewById(R.id.settings_button);
+        Button exitButton = findViewById(R.id.exit_button);
 
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         exitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finishAffinity(); // Завершает работу приложения
+                finishAffinity();
             }
         });
     }
