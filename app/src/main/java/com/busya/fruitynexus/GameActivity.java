@@ -29,10 +29,10 @@ import java.util.Locale;
 public class GameActivity extends AppCompatActivity {
 
     private GridLayout gameGrid;
-    private int rows = 9;
-    private int cols = 6;
-    private int cellSize = 80;
-    private int padding = 2;
+    private int rows = 10;
+    private int cols = 5;
+    private int cellSize = 75;
+    private int padding = 1;
 
     private int[][] gameBoard;
     private int[] possibleFruitDrawables = {
