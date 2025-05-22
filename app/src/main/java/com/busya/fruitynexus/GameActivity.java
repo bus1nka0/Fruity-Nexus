@@ -31,7 +31,7 @@ public class GameActivity extends AppCompatActivity {
     private GridLayout gameGrid;
     private int rows = 10;
     private int cols = 5;
-    private int cellSize = 75;
+    private int cellSize = 70;
     private int padding = 1;
 
     private int[][] gameBoard;
